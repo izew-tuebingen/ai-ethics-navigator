@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    /* Path Mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/types": ["src/types"],
+      "@/components/*": ["src/components/*"],
+      "@/pages/*": ["src/pages/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/utils/*": ["src/utils/*"]
+    },
+
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    /* Emit */
+    "noEmit": true,
+
+    /* Interop Constraints */
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Skip Type Checking */
+    "skipLibCheck": true,
+
+    /* Type Definitions */
+    "types": ["vite/client", "node"]
+  },
+  "include": [
+    "src",
+    "archive/LabelPage.tsx",
+    "archive/imports/TopBar.tsx",
+    "archive/imports/ProgressDonut test.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

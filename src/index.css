@@ -1,0 +1,7 @@
+/* Minimal reset to avoid interfering with Tailwind styles */
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+}

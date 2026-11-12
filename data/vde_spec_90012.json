@@ -1,0 +1,2596 @@
+{
+  "id": "vde_spec_90012",
+  "name": "VDE_Spec_90012",
+  "lastUpdated": "2026-11-11T13:09:47.410Z",
+  "values": [
+    {
+      "id": "d1d52d6b-71ea-4562-ad1e-22b61e887f76",
+      "name": "Transparency",
+      "description": "Aims to enable people affected by technical systems to adjust the AI's decision-making behaviour towards them.",
+      "path": "/data/0_transparency.json",
+      "total_questions": 12,
+      "icon": "triangle",
+      "color": "#6000A4",
+      "bgColor": "#f3e2ff",
+      "borderColor": "#6000a4",
+      "rawColorName": "purple",
+      "version": "1.0",
+      "createdDate": "2025-06-02",
+      "criteria": [
+        {
+          "id": "0c6c489f-3679-46ab-9669-cf97731595e0",
+          "code": "T1",
+          "name": "Documentation of Data Sets",
+          "description": "This collection contains questions that help to document the origin and characteristics of the data sets used for the AI system. It is intended to provide transparency about where the data comes from and how it has been analysed.",
+          "indicators": [
+            {
+              "id": "402e1b86-dd7b-4394-bd2e-cfdbac1c0a3a",
+              "code": "T1.1",
+              "question": "Is the data's origin documented?",
+              "guidance": "Established structured notations like \"datasheets for datasets\" are recommended here.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "367e3eaa-74fd-495c-b768-32eb5eb22fce",
+                  "label": "A",
+                  "text": "Yes, with structured datasheets, including detailed information on: data handling, data collector, data collection method."
+                },
+                {
+                  "id": "528e8849-06e7-4d91-b012-5907ae3a3e72",
+                  "label": "B",
+                  "text": "Yes, with structured datasheets including detailed information on: data handling, data collector, data collection method, but containing few (not all) information."
+                },
+                {
+                  "id": "fea1a970-3f9f-4cc0-9736-1f52789d1504",
+                  "label": "C",
+                  "text": "Yes, information is collected on: data collection method, data handling, data collector, containing few or missing information without structured datasheets."
+                },
+                {
+                  "id": "0e054bf4-4003-4ea8-ad3f-08df73f88887",
+                  "label": "D",
+                  "text": "Only general information on the data's origin is documented."
+                },
+                {
+                  "id": "660fb2e8-1401-4ee5-a250-09cdcda768d4",
+                  "label": "E",
+                  "text": "No."
+                },
+                {
+                  "id": "85518dff-4713-4385-95a4-03c58b383513",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "e5e18b11-7a95-4cfb-9349-cd5e183f0fe8",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "9bc47a9d-903a-49ea-a0ae-1e84008dac68",
+              "code": "T1.2",
+              "question": "Are the characteristics of data sets analysed and documented?",
+              "guidance": "Explorative question. Related to R1.2 and F1.7. Characteristics of data sets are: fit to operational domain, number of data points in relationship to the domain, individual or perturbated data points potential for bias, analysis for potential proxies.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "3c0537c0-1d14-4bab-a3f1-186e0258ea0f",
+                  "label": "A",
+                  "text": "Yes, structured information about the characteristics of data sets, including all mentioned characteristics, is provided."
+                },
+                {
+                  "id": "db1069e4-abc5-4505-b133-a4d53c1200ba",
+                  "label": "B",
+                  "text": "Yes, structured information about the characteristics of data sets, including all mentioned characteristics, is provided, but only some contain few or missing information."
+                },
+                {
+                  "id": "e8a4f0ca-97b9-4623-a591-536ebde5e587",
+                  "label": "C",
+                  "text": "Yes, structured information about the characteristics of data sets is provided, but not covering all mentioned characteristics."
+                },
+                {
+                  "id": "3df97000-de7e-4e30-8bcf-850516cbe1cb",
+                  "label": "D",
+                  "text": "Yes, some not structured information about the characteristics of data sets is provided."
+                },
+                {
+                  "id": "acf8b5fa-2c16-4e5e-a543-7ea1dbd03f2e",
+                  "label": "E",
+                  "text": "None."
+                },
+                {
+                  "id": "ff5780f3-7a12-40e3-b733-1b8dc020cab7",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "90b2971f-351f-4623-8351-728d5d4da142",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1f63949f-d232-465d-934c-596630c8b78d",
+          "code": "T2",
+          "name": "Documentation about the AI Systems Operation",
+          "description": "This collection contains questions that help to document the characteristics of the AI system(s) and AI Application. It is intended to provide transparency about the AI system(s) and AI Application used in research and development.",
+          "indicators": [
+            {
+              "id": "894bdc5b-fcb3-4f91-aeaf-8f1aa801c058",
+              "code": "T2.1",
+              "question": "Are the characteristics of the AI system(s) documented?",
+              "guidance": "Characteristics of AI system(s) are: architecture or model graph (Num of layers, Parameters, connectivity input-output dimensions), expected input data, expected output data, parameter precision (e.g. 8/16/32-bit).",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "5da261f4-ca9a-4fe1-bd97-c9aef1c88f57",
+                  "label": "A",
+                  "text": "Yes, characteristics are documented, including: architecture or model graph, expected input data, expected output data, parameter precision. If there are relevant stakeholders, the documentation is available to them."
+                },
+                {
+                  "id": "7ed34883-1664-40b0-ac9d-8c658f4476f2",
+                  "label": "B",
+                  "text": "Yes, characteristics are documented, including: architecture or model graph, expected input data, expected output data, parameter precision. The documentation is available for the competent authorities, but not for all relevant stakeholders."
+                },
+                {
+                  "id": "a0039d08-9438-4b99-83b8-45c131488072",
+                  "label": "C",
+                  "text": "Yes, some characteristics are documented."
+                },
+                {
+                  "id": "12b97c03-c5e7-4bb7-b08f-40a908a6f946",
+                  "label": "D",
+                  "text": "No."
+                },
+                {
+                  "id": "64bac4a3-ed7f-4c23-ac10-9280d68cafcc",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "d298f5b2-f257-4f6f-9517-018ee0bc79cf",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "aab7c7cc-865b-45dd-828c-69482458a605",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "558082a3-c4cd-4527-895b-26c55c7f8365",
+              "code": "T2.2",
+              "question": "Are the characteristics of the AI Application documented?",
+              "guidance": "Characteristics of AI application are: Hardware requirements, Training method (e.g. online/offline/…), System architecture, Flow of information.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "6cbd34d2-0b2b-4102-9f1c-fc5b769180df",
+                  "label": "A",
+                  "text": "Yes, characteristics are documented, including: Hardware requirements, Training method, System architecture, Flow of information. If there are relevant stakeholders, the documentation is available to them."
+                },
+                {
+                  "id": "6c546fad-788c-4a8e-b6b1-e8e4baf4c10c",
+                  "label": "B",
+                  "text": "Yes, characteristics are documented, including: Hardware requirements, Training method. If there are relevant stakeholders, the documentation is available to them."
+                },
+                {
+                  "id": "d14e3ceb-635c-4c47-8f5d-612ed6a0fe62",
+                  "label": "C",
+                  "text": "Yes, characteristics are documented, but they are not available to all relevant stakeholders."
+                },
+                {
+                  "id": "44e75a6e-dc80-4590-884a-d8ee6818e6c4",
+                  "label": "D",
+                  "text": "No."
+                },
+                {
+                  "id": "bb363119-9b53-4f40-b1db-2f55403f71bd",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "ce40539a-3447-47e8-bbb8-9654d38b2743",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "b541a748-a46a-45e7-980f-fbe5a7e779e7",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "48a2ce08-63f0-42b0-9aaa-ff5ab31ea1f9",
+          "code": "T3",
+          "name": "Intelligibility",
+          "description": "This collection contains questions about the selection of intelligible AI models, the degree of explainability provided, and whether interfaces and explanations are designed to adequately inform user groups and affected persons about outcomes and mechanisms.",
+          "indicators": [
+            {
+              "id": "c96ec7e1-834b-4629-a42a-464ad9875a7f",
+              "code": "T3.1",
+              "question": "Have the most intelligible AI models/systems been selected that can fulfil the application purpose?",
+              "guidance": "Aspects of the justification: performance, efficiency, simplicity, intelligibility, locally / globally interpretable.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "ed2f4a71-0829-4bbb-aa91-77d6c9fa1ca0",
+                  "label": "A",
+                  "text": "Yes, the AI system and application approach has been evaluated, documented and justified. The most intelligible model from this analysis has been used. This evaluation is open to the public."
+                },
+                {
+                  "id": "9d6f69e8-9eae-488e-ad38-f09d9362d03a",
+                  "label": "B",
+                  "text": "No, but the AI system was evaluated regarding interpretability. This evaluation is open to the public."
+                },
+                {
+                  "id": "de7f9928-4a2d-4677-81c8-437a872fd051",
+                  "label": "C",
+                  "text": "No, but the AI system was evaluated regarding interpretability. This evaluation is open to the competent authorities."
+                },
+                {
+                  "id": "0b335a55-718c-4b31-bde6-f89002d38b83",
+                  "label": "D",
+                  "text": "No, the AI system (architecture) has not been evaluated."
+                },
+                {
+                  "id": "ba3fe2c0-97cb-4136-98b4-f8cb4fc27f75",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "d6ee3fac-06c5-4968-915a-20b311a834f9",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "b1e7f1a3-1f4f-4249-bbbd-f556096b43d9",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "87ac6faf-d956-46f3-b22f-c0a5daa1622a",
+              "code": "T3.2",
+              "question": "What degree of explainability including a regarding documentation is provided?",
+              "guidance": "Definition of local and global explainability is in the glossary.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "4c6c9c2f-80b4-493a-9767-cdf91c153057",
+                  "label": "A",
+                  "text": "An interface with details about the AI system/application and the decision-making process is available and the AI application is globally interpretable."
+                },
+                {
+                  "id": "c11c6b34-3f4c-4be3-b3cf-2d1aef6a887b",
+                  "label": "B",
+                  "text": "An interface with details about the AI system/application and the decision-making process is available and the AI application is locally interpretable."
+                },
+                {
+                  "id": "6e46f9cc-9fef-445d-ad1b-e7c01fbc02dc",
+                  "label": "C",
+                  "text": "An interface with details about the AI system/application and the decision-making process is available. It allows extraction of the most relevant features and a rough representation of their interrelationships and interactions."
+                },
+                {
+                  "id": "83cc6d4b-0377-49b6-af0c-53d429c15c09",
+                  "label": "D",
+                  "text": "The modes of interpretability are available, but can only be used/understood post hoc by experts."
+                },
+                {
+                  "id": "c3c95960-258d-4b1d-b25c-f3e05e48610e",
+                  "label": "E",
+                  "text": "The modes of interpretability need to be adjusted ex post to the individual model and use by experts."
+                },
+                {
+                  "id": "801fdb7e-7403-4e17-8d41-500495029afc",
+                  "label": "F",
+                  "text": "The model is only theoretically comprehensible."
+                },
+                {
+                  "id": "29083053-6c38-4f1e-bf83-3c4b193ff43a",
+                  "label": "G",
+                  "text": "There are no known modes of interpretability."
+                }
+              ]
+            },
+            {
+              "id": "bbac9613-22e7-43ea-a762-10261195212e",
+              "code": "T3.3",
+              "question": "Is the interface of the AI system/application designed in a way that adequately informs the user groups about the outcomes and mechanisms?",
+              "guidance": "User-oriented: The interface / interaction with the system should be designed in such a way that the user-groups understand the procedures and outcomes. The understanding depends on the relevant information necessary to adequately fulfil their task.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "5be63dc8-5c7d-4ff7-8a69-b54496b6b56a",
+                  "label": "A",
+                  "text": "Yes, the interface of the system is based on the feedback of the user-groups and affected persons, e.g.: user and affected person group analysis, tested with the user-group, experiences from the analysis or test of former products."
+                },
+                {
+                  "id": "be83ded9-e9d4-4816-a447-d7d9c8578ed9",
+                  "label": "B",
+                  "text": "Yes, the interface of the system is based on the feedback of specific target users, e.g.: user and affected person group analysis, tested with the user-group, experiences from the analysis or test of former products."
+                },
+                {
+                  "id": "b0f4e417-1c0b-47b6-bd00-5dc8a3b1bb1a",
+                  "label": "C",
+                  "text": "Yes, but without participation of the target groups."
+                },
+                {
+                  "id": "c07c7156-0129-49c6-8547-dca519b60412",
+                  "label": "D",
+                  "text": "Yes, but the modes of interpretability are only specific for one target group."
+                },
+                {
+                  "id": "e4311130-dbb6-436a-af05-87df88e86227",
+                  "label": "E",
+                  "text": "No, the modes of interpretability are not target-group specific."
+                },
+                {
+                  "id": "b82ae4d3-1f78-4c46-a3af-f41cda693a5b",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "8443195f-1f32-405a-9693-6a3dea18cf2b",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "12bba4d8-77a1-42d0-a34d-c585c9c3fc50",
+              "code": "T3.4",
+              "question": "Are the explanations of the AI system/application outcome designed in a way that adequately informs the affected persons?",
+              "guidance": "Affected Persons oriented: The explanations of the system should be designed in such a way that the affected persons understand the procedures and outcomes. The understanding depends on the relevant information necessary to understand the effects to them.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "1f5991e0-15c4-406b-9eb9-4286e9ef2e96",
+                  "label": "A",
+                  "text": "Yes, the explanation of the system is based on the feedback of the affected persons, e.g.: affected person group analysis, tested with the affected person-groups, experiences from the analysis or test of former products."
+                },
+                {
+                  "id": "b550a08e-9dd3-49a2-b81d-148818537a04",
+                  "label": "B",
+                  "text": "Yes, the explanation of the system is based on the feedback of specific affected person groups, e.g.: affected person-group analysis, tested with the affected person groups, experiences from the analysis or test of former products."
+                },
+                {
+                  "id": "b5a67d32-f1b3-45ab-8bcb-8d3b4e976dd1",
+                  "label": "C",
+                  "text": "Yes, but without participation of the affected persons."
+                },
+                {
+                  "id": "79c1565e-70c0-4e90-b618-65247deff725",
+                  "label": "D",
+                  "text": "Yes, but the modes of interpretability are only specific for one affected persons group."
+                },
+                {
+                  "id": "42ebe395-0410-4065-98e0-8080f998055f",
+                  "label": "E",
+                  "text": "No, the modes of interpretability are not affected person group specific."
+                },
+                {
+                  "id": "84f03665-08fb-4cfc-ba27-923fd1b5c06c",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "adce0b82-180b-4f8d-97dc-6ecb791438c4",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5eabb50a-cbb8-4f7a-95b5-6f34608ff800",
+          "code": "T4",
+          "name": "Accessibility (outside of relevant authorities)",
+          "description": "This collection contains questions about who has access to the AI system, its datasets, its documentation, and the data attributes used as inputs. It is intended to provide transparency about the accessibility of the AI system and its underlying data and documentation to stakeholders outside of competent authorities.",
+          "indicators": [
+            {
+              "id": "dc510b39-2d5f-4493-9686-abc3815daa2c",
+              "code": "T4.1",
+              "question": "Who has access to the AI System and the AI application?",
+              "guidance": "If an NDA is used in this context, it must not prevent the publication of conclusions drawn from access and analysis of the data, the right to analyse the data freely and fully, as well as partial publication of single data points or database entries as illustrations for conclusions.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "93696be4-febe-4cee-a8fd-2964de252b91",
+                  "label": "A",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities, additional information and trust intermediaries (e.g. regulators, watchdogs, research, courts)."
+                },
+                {
+                  "id": "ceb406b0-ec01-4009-aa8b-d8255ccf7c0b",
+                  "label": "B",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities."
+                },
+                {
+                  "id": "04617d83-aad7-4969-a9b2-f47316d8ef2d",
+                  "label": "C",
+                  "text": "Only competent authorities."
+                },
+                {
+                  "id": "98f96d54-5887-4bf7-bad3-fa160f1614df",
+                  "label": "D",
+                  "text": "Nobody outside of the company."
+                },
+                {
+                  "id": "e40f2aa8-2d79-47e0-aeca-2b4d14d8d60a",
+                  "label": "E",
+                  "text": "Nobody outside of the development team, not even inside the company."
+                },
+                {
+                  "id": "28bc129d-4142-4409-8d77-2ae77983001d",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "420859d0-be16-4048-a80c-9ad926a1335d",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "e29c4a1f-b122-46ed-ab2c-ef9ebfe99fbd",
+              "code": "T4.2",
+              "question": "Who has access to the datasets?",
+              "guidance": "If an NDA is used in this context, it must not prevent the publication of conclusions drawn from access and analysis of the data, the right to analyse the data freely and fully, as well as partial publication of single data points or database entries as illustrations for conclusions.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "37afea85-a30a-487d-bdc1-4dd0dc619b9e",
+                  "label": "A",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities, additional information and trust intermediaries (e.g. regulators, watchdogs, research, courts)."
+                },
+                {
+                  "id": "1597d472-b362-44e5-afb9-8158c9227359",
+                  "label": "B",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities."
+                },
+                {
+                  "id": "726758c4-7a80-47f6-a63d-a17ab1f3ccd7",
+                  "label": "C",
+                  "text": "Only competent authorities."
+                },
+                {
+                  "id": "c396477e-f27d-4355-b7c2-77cf93218811",
+                  "label": "D",
+                  "text": "Nobody outside of the company."
+                },
+                {
+                  "id": "cc5aeea3-502e-4f2b-ae06-c1ac796e04d9",
+                  "label": "E",
+                  "text": "Nobody outside of the development team, not even inside the company."
+                },
+                {
+                  "id": "9ac944d4-2e0c-41cb-a419-334dfa661191",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "0e67dd95-8583-47df-b3ec-2b947ca602a8",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "1d87592c-f246-4de0-a755-caeca8e25e46",
+              "code": "T4.3",
+              "question": "Who has access to the documentation regarding the AI system/application and its data?",
+              "guidance": "Documentation from T1.1 and T1.2, including a short description of the operational domain.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "4c057f27-f92e-49a4-b90b-7bd71cce9968",
+                  "label": "A",
+                  "text": "Everyone."
+                },
+                {
+                  "id": "519950fd-dacc-4276-a201-5041d22eb5e0",
+                  "label": "B",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities, additional information and trust intermediaries (e.g. regulators, watchdogs, research, courts)."
+                },
+                {
+                  "id": "8a7e70f0-86ee-4445-bfc3-cabd10cbf96b",
+                  "label": "C",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities."
+                },
+                {
+                  "id": "d76d8fc3-3db7-4e09-909c-dee1b68f23b4",
+                  "label": "D",
+                  "text": "Only competent authorities."
+                },
+                {
+                  "id": "79a245b9-da96-4b65-a454-5b58225504dc",
+                  "label": "E",
+                  "text": "Nobody outside of the company."
+                },
+                {
+                  "id": "ed3f0506-fa5c-4e02-8583-5bf9856d609b",
+                  "label": "F",
+                  "text": "Nobody outside of the development team, not even inside the company."
+                },
+                {
+                  "id": "a5d9bbfe-8956-4ab4-869e-137d658d4641",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "id": "b97e4cac-8531-4148-b746-0fe972ab6464",
+              "code": "T4.4",
+              "question": "Who can see which data attributes (including pre-processing) were used as an input for the AI system/application to generate its output?",
+              "guidance": "This refers only to the name/label and not to the individual content of the data attribute.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "ecd2ae81-924d-4f46-b3a0-1fae7a4d5aac",
+                  "label": "A",
+                  "text": "Everyone."
+                },
+                {
+                  "id": "cefe35c1-554b-4a4b-b80a-541524f380f5",
+                  "label": "B",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities, additional information and trust intermediaries (e.g. regulators, watchdogs, research, courts)."
+                },
+                {
+                  "id": "c2760f5c-fb78-4d49-b5a0-bda0b1d2ffb9",
+                  "label": "C",
+                  "text": "With the possibility of a non-disclosure agreement: operators of the AI system, competent authorities."
+                },
+                {
+                  "id": "cfcb2bcb-10a5-4265-add2-d53f853c2464",
+                  "label": "D",
+                  "text": "Only competent authorities."
+                },
+                {
+                  "id": "e0368d41-444e-4f0a-8853-628e747ef06c",
+                  "label": "E",
+                  "text": "Nobody outside of the company."
+                },
+                {
+                  "id": "4ef51196-8f35-434e-8532-f09db11f9ef4",
+                  "label": "F",
+                  "text": "Nobody outside of the development team, not even inside the company."
+                },
+                {
+                  "id": "7b43dc6d-403d-4372-a024-0772185e28aa",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "80b9365a-b57e-44ba-9730-3a6168e8a87b",
+      "name": "Accountability",
+      "description": "Describes the willingness or obligation to assume responsibility and ensure verifiability and replicability",
+      "path": "/data/1_accountability.json",
+      "total_questions": 11,
+      "icon": "square",
+      "color": "#036400",
+      "bgColor": "#e1ffe0",
+      "borderColor": "#036400",
+      "rawColorName": "green",
+      "version": "1.0",
+      "createdDate": "2025-06-09",
+      "criteria": [
+        {
+          "id": "a40d74bc-5574-4cd9-aa98-2bedc0ca32e0",
+          "code": "A1",
+          "name": "Processes in life cycle to ensure accountability",
+          "description": "",
+          "indicators": [
+            {
+              "id": "824d5956-a977-40c8-84a5-8bca72b1e109",
+              "code": "A1.1",
+              "question": "How detailed is the process of data collection and management logged/recorded and how easily can relevant stakeholders access it?",
+              "guidance": "Relevant stakeholders can for example be data users, product manager or competent authorities. Logs/Records have to be stored for a reasonable time to allow delayed analysis.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "375241b8-fe25-40a3-9294-0f9975852384",
+                  "label": "A",
+                  "text": "Logging/Records includes: origin of data, responsible person, relevant data preparation processing operations (annotation, labelling, cleaning, enrichment, aggregation, ...), recovery of data in every stage. Stakeholder access: easy, universal format"
+                },
+                {
+                  "id": "4025efe2-b619-4b23-b586-9497811bff8e",
+                  "label": "B",
+                  "text": "Logging/Records includes: origin of data, responsible person, relevant data preparation processing operations (annotation, labelling, cleaning, enrichment, aggregation, ...), recovery of data in every stage. Stakeholder access: In an unstructured and not clearly/prepared form; only for competent authorities"
+                },
+                {
+                  "id": "d2801cd6-2246-43f0-9256-9d27a6264623",
+                  "label": "C",
+                  "text": "Logging/Records includes: origin of data, responsible person. Stakeholder access: In an unstructured and not clearly/prepared form; only for competent authorities"
+                },
+                {
+                  "id": "4da0897f-5f79-4918-a220-6ad4b3b91824",
+                  "label": "D",
+                  "text": "There is no logging/recording, but details about origin of data are documented. Stakeholder access: In an unstructured and not clearly/prepared form; only for competent authorities"
+                },
+                {
+                  "id": "5b1ac49d-81c2-4d6f-8d2e-638ff20e4431",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "38ee3c12-8a6b-4669-a5b6-a869dc9613ee",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "9350d23c-dd77-4cf7-b7c5-e49ebc813af5",
+                  "label": "G",
+                  "text": "The data collection process is not logged or documented."
+                }
+              ]
+            },
+            {
+              "id": "775964f7-9b44-4132-a0c9-86ee45b49b52",
+              "code": "A1.2",
+              "question": "Are the development and training process logged/recorded?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "bf909aaa-11ee-4b3b-ba1f-4e34ecb61dcc",
+                  "label": "A",
+                  "text": "Yes, comprehensive logging/recording  including the responsibilities is available, including: operation in which the data was used and how they have been modified; version control of AI systems and the involved data; version restore/recovery of AI systems and is available for all relevant stakeholders."
+                },
+                {
+                  "id": "44a7d822-4600-4039-bc6a-77a4d59cbaba",
+                  "label": "B",
+                  "text": "Yes, comprehensive logging/recording  including the responsibilities is available, including: operation in which the data was used and how they have been modified; version control of AI systems and the involved data and is available for all relevant stakeholders"
+                },
+                {
+                  "id": "26d8b8f3-3c26-4c58-846f-e8a37c4a8cc5",
+                  "label": "C",
+                  "text": "No logging/recording  available, but a general description of the development and training process including responsibilities is provided for all relevant stakeholders."
+                },
+                {
+                  "id": "44fdafed-d21b-40d3-9bb0-c4413ebfc9b7",
+                  "label": "D",
+                  "text": "No logging/recording , but a general description of the development and training process is provided "
+                },
+                {
+                  "id": "03fc780b-5d73-425d-9989-7fd8943df1c0",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "f37b5251-a97f-4d64-bc12-81d87d2278c4",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "3bb2c431-1ce5-4fce-ac10-6191e2f62afa",
+                  "label": "G",
+                  "text": "There is no logging and information about the process"
+                }
+              ]
+            },
+            {
+              "id": "7a1c9d9e-b5a5-41c0-b08b-59cc68e4deb0",
+              "code": "A1.3",
+              "question": "Is the traceability of the system-composition (including soft- and hardware-composition and components) guaranteed?",
+              "guidance": "Software-components can be: AI model, AI system, AI application",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "6f8d0f6c-fe5c-42ad-8a65-d16c2bfeb087",
+                  "label": "A",
+                  "text": "There is sufficient information about the system available: to easily reconstruct the composition of the system, at every time in its lifecycle"
+                },
+                {
+                  "id": "1d23715a-1cd1-4528-982d-12321ab81024",
+                  "label": "B",
+                  "text": "There is sufficient information about the system available: to easily reconstruct the composition of the system, at major inflection points (releases, gates) in its lifecycle"
+                },
+                {
+                  "id": "c10d0578-4230-4518-a11f-c440e500c244",
+                  "label": "C",
+                  "text": "There is sufficient information about the system available to: reconstruct the composition of the system with additional efforts"
+                },
+                {
+                  "id": "f2614448-a183-4016-b33b-b3ac2b46faa8",
+                  "label": "D",
+                  "text": "There is not enough information to reconstruct the composition of the system."
+                },
+                {
+                  "id": "3f174446-ef3e-4ec5-a6f7-bab377da3fd4",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "c73bcd36-7744-4c31-8209-c8e3becd8809",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "cd64ff15-0f14-4b66-9c83-8a70a09c73e0",
+                  "label": "G",
+                  "text": "No."
+                }
+              ]
+            },
+            {
+              "id": "9d93294c-4fac-48e8-b445-0b4089df0c38",
+              "code": "A1.4",
+              "question": "Are systems with a learning component monitored  in their interaction with their environment throughout the runtime?",
+              "guidance": "Learning systems, which adapt their behaviour during their use should have additional monitoring applications that track the changes in the system and highlight how the evolving systems differ from the original one.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "cf9a9da3-8f8b-452b-b9c6-06d010f2db3c",
+                  "label": "A",
+                  "text": "Yes, the learning process is monitored: Logging of input-output behaviour is available for a defined period; Misuse is detected and reported; Concept Drift and Data Drift is detected and reported (e.g. changing operational domain properties) — If required, the information can be adequately prepared and made available to the relevant stakeholders."
+                },
+                {
+                  "id": "e9d55ed6-91ce-4892-8a42-23ba085f21d1",
+                  "label": "B",
+                  "text": "Yes, the learning process is monitored: Logging of input-output behaviour is available for a defined period; Misuse is detected and reported; Concept Drift and Data Drift is detected and reported (e.g. changing operational domain properties)"
+                },
+                {
+                  "id": "6cee7c72-1bb0-4f7e-8842-d7a3b6736038",
+                  "label": "C",
+                  "text": "The learning process will be logged, but reviewed only at infrequent intervals: Misuse is detected and reported; Concept Drift and Data Drift is detected and reported (e.g. changing operational domain properties)"
+                },
+                {
+                  "id": "0a703665-0cd2-4862-847c-7f5d0f249229",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "a0c018d5-aff0-4ce7-bdb4-f72ee4f5fb16",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "e272a6b2-629c-4b8b-a22b-f735230dd06f",
+                  "label": "F",
+                  "text": "The learning process will be logged, but review is not planned."
+                },
+                {
+                  "id": "6399e350-c1bb-4dfb-8b84-95f2f06ad66a",
+                  "label": "G",
+                  "text": "There is no logging or monitoring of the learning process."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "7798885a-42bd-4ce0-9523-95b4de859fb2",
+          "code": "A2",
+          "name": "Corporate/institutional liability (retrospective)",
+          "description": "",
+          "indicators": [
+            {
+              "id": "2fa7f9ca-11d7-4816-9b62-489dbff36611",
+              "code": "A2.1",
+              "question": "Is there a defined channel for giving feedback and obtain information about system characteristics?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "26811d8c-5e51-4e3d-a7c0-ae130821033e",
+                  "label": "A",
+                  "text": "Yes, there is an instance that: has enough Information and power to give individualized Information; can enforce reviews of system characteristics"
+                },
+                {
+                  "id": "ceacc40b-5f83-4b7f-b75b-dd18169f0443",
+                  "label": "B",
+                  "text": "Yes, there is an instance that: has enough Information and power to give individualized Information"
+                },
+                {
+                  "id": "a66ce67b-5089-4f51-a742-f9ca6819ab1c",
+                  "label": "C",
+                  "text": "Yes, but only standardized Information can be given"
+                },
+                {
+                  "id": "a4956fea-8e1c-40c5-b668-0d5a91437af7",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "885babe6-ea4f-42f5-ae2c-aa236e84a3cb",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "9ecf2617-0ef0-4a2c-88bd-5c0e1d1d7c23",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "e1bd9524-3088-406c-8a4d-a8aa13ecf2c1",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "eca6c023-14c2-4a35-8b23-d8ecc3e4fad1",
+              "code": "A2.2",
+              "question": "How 'easy' is the access to the feedback channels?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "dbb7de20-c597-4271-8860-cd795889612e",
+                  "label": "A",
+                  "text": "Everyone with a justified interest can contact the feedback channel and receives direct feedback"
+                },
+                {
+                  "id": "71efb0d3-dba6-4110-852c-9b59511a3b6d",
+                  "label": "B",
+                  "text": "Only users can contact the feedback channels"
+                },
+                {
+                  "id": "9eee37a7-c4e9-4789-84e6-007c595409b4",
+                  "label": "C",
+                  "text": "Access is only possible when fulfilling certain requirements: e.g. additional payment or only at predefined points during the lifecycle"
+                },
+                {
+                  "id": "b1cf284f-7369-4fe4-8951-5968f91f5b17",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "fd66b62d-9e72-411e-aa56-421de695ca97",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "f97b2ed8-fd83-47c2-8d25-71a343f07f34",
+                  "label": "F",
+                  "text": "Only for the competent authorities"
+                },
+                {
+                  "id": "e3381502-4a5e-445a-9893-d8b1f62e1cd4",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "56008ca0-fd73-4384-bf2e-f02ef6e0c4ab",
+          "code": "A3",
+          "name": "Responsible Human Oversight",
+          "description": "",
+          "indicators": [
+            {
+              "id": "59c4fbb9-557e-4077-8754-382257b47424",
+              "code": "A3.1",
+              "question": "Skippable if not HIC - Human in Command (Control): Is the user expertise needed to judge the results of the AI system to avoid overconfidence defined?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "971230e8-31bd-4dd5-a811-3f9cf9699b6d",
+                  "label": "A",
+                  "text": "The level of expertise required for a human user to understand and judge the system's recommendations, given the data and body of knowledge in the field, is documented and appropriate with regard to the intended purpose."
+                },
+                {
+                  "id": "4585b7ff-b6ca-482b-b7b2-9ed655543626",
+                  "label": "B",
+                  "text": "The level of expertise that is required by a human operator to  check the plausibility of the recommendations of the system given the data and the body of knowledge of that domain are documented."
+                },
+                {
+                  "id": "d690bf31-30a2-4006-8468-3105f0cd2c68",
+                  "label": "C",
+                  "text": "The expertise that is required by a human operator to work successfully with the system are documented."
+                },
+                {
+                  "id": "ae1b59d6-8046-497d-873b-aa4972d7217e",
+                  "label": "D",
+                  "text": "The level of expertise is not specified but describtions about it can be requested and obtained."
+                },
+                {
+                  "id": "20ce2984-bf36-47d8-9aff-f77e0002d36c",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "fafcbcac-df4d-493e-965e-7c297fc61aaa",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "399a521f-7e78-4e04-8bf9-8f1f22e72f15",
+                  "label": "G",
+                  "text": "No measures have been taken"
+                }
+              ]
+            },
+            {
+              "id": "ba3eb034-2c37-49a3-9123-eddd9f815d9b",
+              "code": "A3.2",
+              "question": "Skippable if not HIC - Human in Command (Control): Which effort is needed to understand and interact with the AI system? (depending on the application context)",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "476006c0-b645-4ad7-a8d0-2331e1895b6b",
+                  "label": "A",
+                  "text": "The intended user understands the actions of the AI system/application with no effort and knows how to interact with it immediately."
+                },
+                {
+                  "id": "479135d0-939c-4f99-95da-2a44673868e0",
+                  "label": "B",
+                  "text": "The intended user understands the actions of the AI system/application with little effort and knows how to interact with it after a short time period."
+                },
+                {
+                  "id": "267f8a39-71de-4b45-9cef-c3b3dc8fea15",
+                  "label": "C",
+                  "text": "Guided introduction of the AI system/application is needed."
+                },
+                {
+                  "id": "a13e1323-3f66-4fa5-b0f4-ab337bf7a916",
+                  "label": "D",
+                  "text": "Extended training is needed"
+                },
+                {
+                  "id": "f34d6e12-b8b2-400b-8735-6b0a43fe0464",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "b7f15d09-2e18-44ac-a749-623a88d79165",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "f2cba3b6-c688-4ea2-8057-22f5e9f61717",
+                  "label": "G",
+                  "text": "Extended training and a prior knowledge in the application context of the AI system is needed."
+                }
+              ]
+            },
+            {
+              "id": "40fae77a-8178-4c3b-bfaf-219137be5559",
+              "code": "A3.3",
+              "question": "Skippable if not HITL - Human in the Loop: Which measures are taken to ensure that the AI system does not affect human autonomy by interfering with the operator's decision-making process in an unintended way?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "6316648b-f6da-4ddb-bec0-e228b5f17d12",
+                  "label": "A",
+                  "text": "The level of human control and involvement in the decision is documented and the interfaces is designed to allow the operator to easily understand and influence the decision process. Proposal of the system and human decision are documented."
+                },
+                {
+                  "id": "4854c31a-4d0b-4ad2-9222-63cb4a950c79",
+                  "label": "B",
+                  "text": "The level of human control and involvement in the decision is documented and the interfaces is designed to allow the operator to influence the decision process."
+                },
+                {
+                  "id": "f13066ba-d4bc-4b70-98a1-f029b2d29c9f",
+                  "label": "C",
+                  "text": "The level of human control and involvement in the decision is documented in a way that allows auditing."
+                },
+                {
+                  "id": "977b6c74-f686-4e47-8ea5-e3932034f88e",
+                  "label": "D",
+                  "text": "The level of human control and involvement in the decision is documented."
+                },
+                {
+                  "id": "8d80202d-0e56-4b9c-9c23-5a643605ec9a",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "5449b551-06ee-4e4f-929c-4b3f38d0bd4b",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "a1e7100b-1c2d-4206-b856-698dd038f6d6",
+                  "label": "G",
+                  "text": "None of the above"
+                }
+              ]
+            },
+            {
+              "id": "46289ac1-d948-4864-8dfb-d6b200a47a63",
+              "code": "A3.4",
+              "question": "Skippable if not HITL - Human in the Loop: Is the human takeover of the system designed so that the user understands the current state of the system and can therefore take over quickly?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "57d34dc6-2924-4a52-b141-057200aeea11",
+                  "label": "A",
+                  "text": "The system has been designed in a way that a seamless handover to a human operator is always possible. This handover has been tested within the full operations envelope of the system and properly documents"
+                },
+                {
+                  "id": "eda4fe88-6363-47d7-a004-fd6654392f84",
+                  "label": "B",
+                  "text": "The system has been designed in a way that a seamless handover to a human operator is always possible. This handover has been tested and documented in the main modes of operation"
+                },
+                {
+                  "id": "bdd626d1-ccbd-4087-a692-94ca977e9d4b",
+                  "label": "C",
+                  "text": "The system has been designed in a way that a seamless handover to a human operator is always possible. This handover has only been tested sporadically"
+                },
+                {
+                  "id": "d3509fbe-fa0a-489d-9515-e0322a580cf6",
+                  "label": "D",
+                  "text": "The system has been designed in a way that a seamless handover to a human operator is always possible. This handover was not tested."
+                },
+                {
+                  "id": "19611aad-9f53-441e-940d-1e7645a7013c",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "9ad58203-05c7-409a-a0c6-8f2ee5f56be0",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "88a8461c-a2dd-4bba-8bdb-52dfd2d6d6c5",
+                  "label": "G",
+                  "text": "System was not designed and has not been tested regarding the handover to a human operator."
+                }
+              ]
+            },
+            {
+              "id": "3324b93e-1185-478e-8773-d23820b02bf6",
+              "code": "A3.6",
+              "question": "Skippable if not HOL - Human on the Loop: Does the system makes the decision parameters transparent and allows post-hoc changes?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "54805eb8-b031-44b1-9b98-501b7975d246",
+                  "label": "A",
+                  "text": "Decision parameters are well documented and transparent. There is a process and tools in place that allow documentation and ex-post explanation of decisions taken by the system. Process parameters can be changed (System can be retrained by customer)."
+                },
+                {
+                  "id": "626bed99-cb33-4d19-a86d-64f71a528dcb",
+                  "label": "B",
+                  "text": "Decision parameters are well documented and transparent. Decisions taken by the system are well documented. Process parameters can be changed (System can be retrained by customer)."
+                },
+                {
+                  "id": "312f5bea-eddc-4e96-9a42-8d14fb413f4c",
+                  "label": "C",
+                  "text": "Decision parameters are transparent and can be changed (System can be retrained by customer)."
+                },
+                {
+                  "id": "df316526-477a-4551-bd25-22ba954f9eee",
+                  "label": "D",
+                  "text": "Process in place to change decision parameters by developer"
+                },
+                {
+                  "id": "d8c26281-e069-4f32-bdac-8a1bedafa68a",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "bd929c2e-5b44-4930-84de-85b0856173f8",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "b7435586-4096-46fe-aac3-b2fa2b785661",
+                  "label": "G",
+                  "text": "No."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eb295dd5-30c3-4af9-970a-cd09f333457a",
+      "name": "Fairness",
+      "description": "Fairness aims to prevent unjust discrimination in AI and address the exploitation of hidden labor in its development.",
+      "path": "/data/2_fairness.json",
+      "total_questions": 12,
+      "icon": "hexagon",
+      "color": "#006972",
+      "bgColor": "#dcfcff",
+      "borderColor": "#006972",
+      "rawColorName": "cyan",
+      "version": "1.0",
+      "createdDate": "2025-06-09",
+      "criteria": [
+        {
+          "id": "d8cc9dfb-8aa1-4bf3-b5fe-078904c6f745",
+          "code": "F1",
+          "name": "Assuring fairness during development",
+          "description": "",
+          "indicators": [
+            {
+              "id": "b166de49-62af-4109-944e-bba5f7b2272f",
+              "code": "F1.1",
+              "question": "Are all entities impacted and/or influenced by the system considered?",
+              "guidance": "Considers the impact on the environment in which the system is to be used, including the human agency concept, implementation in the socio-technical system,…",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "d275d5f7-4cdb-41b1-9d38-800557787303",
+                  "label": "A",
+                  "text": "Yes, entities are considered that: directly interface with the AI system (1st order network effects), affected by the deployment of this system (2nd order network effects) entities within the broader social-technical system it operates within"
+                },
+                {
+                  "id": "044d53ce-2f15-4af6-8a00-e79f000da302",
+                  "label": "B",
+                  "text": "Yes, entities are considered that: directly interface with the AI system (1st order network effects) affected by the deployment of this system (2nd order network effects)"
+                },
+                {
+                  "id": "c5cb56c9-d76b-47e6-a7a8-bf2353d74a7e",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "5ef0f308-e47a-4ac7-b3da-23dfd2c2c55c",
+                  "label": "D",
+                  "text": "Yes, entities are considered that: directly interface with the AI system (1st order network effects)"
+                },
+                {
+                  "id": "4dbe6ef9-a59a-4758-a2f9-9b13241b67f7",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "36ecb4fd-d1aa-4468-9af9-674697d62cf2",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "6bf376bf-58be-4a41-98fb-a359fdf83f5f",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "f6657981-97c1-433f-b08b-4a0e28b2c200",
+              "code": "F1.2",
+              "question": "Are target groups defined?",
+              "guidance": "Important characteristics to define different target groups: Demography (age, income, family size, family status, gender, education,…); Geography (residence, origin,…)",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "04d2bd5a-cc2d-4b37-a9c7-5341787db096",
+                  "label": "A",
+                  "text": "Yes, all of the target groups, entities and users are identified and a justification for the selection is provided including additional target groups that arise from reasonably unforeseen misuses"
+                },
+                {
+                  "id": "a983fa30-2e67-46a4-be0e-5ce24854ee00",
+                  "label": "B",
+                  "text": "Yes, all of the target groups, entities and users are identified and a justification for the selection is provided"
+                },
+                {
+                  "id": "7e866c02-2087-4a25-90b3-36c84f241732",
+                  "label": "C",
+                  "text": "Yes, most of the target groups, entities and users are identified and a justification for the selection is provided"
+                },
+                {
+                  "id": "88414aa1-addb-4162-b7d7-313e0aa8c736",
+                  "label": "D",
+                  "text": "Yes, some of the target groups, entities and users are identified"
+                },
+                {
+                  "id": "7b44d4f7-d4b0-4004-85f3-898ea7b54504",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "54f42e54-c98b-4d1c-ae13-7c5d594d8813",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "63b9d049-74f0-4c43-a454-8229cadd7c5c",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "6514066b-26a7-46d6-9118-96ab593d6339",
+              "code": "F1.3",
+              "question": "Are there marginalised entities within the target group and does risk arise for them being marginalised?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "b5895aa1-b7ec-4590-bd6f-8bbc77da7608",
+                  "label": "A",
+                  "text": "Yes, 1. A research to identify all marginalised groups/entities is carried out, 2. All risk that arises from any of the groups being marginalised are detailed and justified, 3. The marginalised groups/entities are involved in the development process"
+                },
+                {
+                  "id": "1329ae4d-3ffa-4303-a871-51687ecc389c",
+                  "label": "B",
+                  "text": "Yes, 1. A research to identify all marginalised groups/entities is carried out, 2. All risk that arises from any of the groups being marginalised are detailed and justified"
+                },
+                {
+                  "id": "90557d58-a905-40b8-8897-7d0aa737b57e",
+                  "label": "C",
+                  "text": "Yes, 1. A research to identify all affected marginalised groups/entities is carried out"
+                },
+                {
+                  "id": "55da796a-fe3c-4103-9120-8a0e7637bf50",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "f03dd3ee-0557-49a8-8e35-5f863171dfa7",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "d8f18465-2653-4b81-8815-4fa07c5c6861",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "b80d2222-dcac-4e93-b786-5a57786469a2",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "75a47ebd-289c-484f-8a19-b38744095881",
+              "code": "F1.4",
+              "question": "Is there a commitment to a fairness definition that considers F1.2 and F1.3.?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "390478d9-84c3-4741-8eaa-123d2160b47d",
+                  "label": "A",
+                  "text": "A fairness definition is defined and provided in collaboration with the target group and marginalised entities/groups. There is a commitment to considering it throughout the lifecycle of the AI system. There is a commitment to a process to validate and ensure the integrity of the fairness criteria throughout the life cycle of the AI system. Easy access and transparency to the fairness definition and criteria is provided to the public, including justification for the definition and process."
+                },
+                {
+                  "id": "d2f782c0-576b-458e-a867-f694cbb444c6",
+                  "label": "B",
+                  "text": "A fairness definition is provided and considered throughout the lifecycle of the AI system. There is a commitment to a process to validate and ensure the integrity of the fairness criteria throughout the life cycle of the AI system. Easy access and transparency to the fairness definition and criteria is provided to the public, including justification for the definition and process."
+                },
+                {
+                  "id": "66249dea-8b7a-494d-bbfc-842f4a61f6c0",
+                  "label": "C",
+                  "text": "A fairness definition is provided and considered throughout the lifecycle of the AI system. Easy access and transparency to the fairness definition and criteria is provided to the public, including justification for the definition and process."
+                },
+                {
+                  "id": "00c192ee-8f18-4368-b193-41c86e5ac0d0",
+                  "label": "D",
+                  "text": "A fairness definition is provided and considered within the development process."
+                },
+                {
+                  "id": "b4900e28-d876-4062-8cc6-5d37e01ef6f1",
+                  "label": "E",
+                  "text": "A fairness definition is provided."
+                },
+                {
+                  "id": "d97c7278-36a6-4887-bb18-1df44b9bb503",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "4770017e-9c64-4e0f-bf6e-f1e4dfd4b62c",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "c4ec94b6-c0ee-40c1-973d-0284b07f9aa1",
+              "code": "F1.5",
+              "question": "Are metrics to track/evaluate fairness with respect to F1.2 and F1.4 in place?",
+              "guidance": "Typical fairness metrics are e.g.: Statistical parity, equal distribution of false negatives, equal distribution of false positives, decision between group fairness or individual fairness, fairness through unawareness, equality of opportunity.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "63e2a106-709c-4a4b-9586-04f620757898",
+                  "label": "A",
+                  "text": "Several metrics to measure and track fairness are in place, that completely align with the fairness definition and criteria throughout the whole lifecycle of the AI system. These metrics have been developed in collaboration with the target group and the marginalised users/entities. The metrics are well documented and transparent to the public"
+                },
+                {
+                  "id": "b0b36c55-91a6-4c47-8520-e30d959a5c0f",
+                  "label": "B",
+                  "text": "Several metrics to measure and track fairness are in place, that completely align with the fairness definition and criteria throughout the whole lifecycle of the AI system. These metrics have been developed in collaboration with the target group and the marginalised users/entities."
+                },
+                {
+                  "id": "c0f6700d-87ba-4d53-b278-c9c24a345ac0",
+                  "label": "C",
+                  "text": "Several metrics to measure and track fairness are in place, that completely align with the fairness definition and criteria throughout the whole lifecycle of the AI system."
+                },
+                {
+                  "id": "c64bf328-5e75-4ec6-8df5-885fa673fa43",
+                  "label": "D",
+                  "text": "Several metrics to measure and track fairness are in place."
+                },
+                {
+                  "id": "99833c24-2695-4ed4-8f0b-5ba2005c6711",
+                  "label": "E",
+                  "text": "A metric to measure and track fairness is in place."
+                },
+                {
+                  "id": "6a4dd9df-7db9-479e-b2ca-9f9c6d422030",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "20fb0251-49c7-417c-baed-6b27d60e9f26",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "0df7ffc7-b9ec-4884-878b-bdf59f07f6ee",
+              "code": "F1.7",
+              "question": "Has the data been analysed for potential harmful, unintended biases with regard to F1.4 and F1.5?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "cb1eac42-3d38-4732-827a-49b833253095",
+                  "label": "A",
+                  "text": "A datasheet is provided. It documents which data sources have been assessed and with which methods in order to identify biases that might bring harm or risk. The documentation covers the objectives and measures taken to avoid harm and risk. It also states why the actions taken are reasonable in relation to the selected fairness metric. The documentation is released to the public. The nature of the bias has been ascertained. It was considered and assessed with respect to the fairness definition and criteria."
+                },
+                {
+                  "id": "96a93b1c-d4a9-493f-b17d-60e209d070a4",
+                  "label": "B",
+                  "text": "A datasheet is provided. It documents which data sources have been assessed and with which methods in order to identify biases that might bring harm or risk. The documentation covers the objectives and measures taken to avoid harm and risk. The documentation is released to the public. The nature of the bias has been ascertained. It was considered and assessed with respect to the fairness definition and criteria."
+                },
+                {
+                  "id": "e4712b23-5c6c-4700-a185-f2df2cdd7ade",
+                  "label": "C",
+                  "text": "A datasheet is provided. The documentation covers the objectives and measures taken to avoid harm and risk. The nature of the bias has been ascertained. It was considered and assessed with respect to the fairness definition and criteria."
+                },
+                {
+                  "id": "d1611427-0e6e-4cc6-8617-f8e2c2570bf4",
+                  "label": "D",
+                  "text": "The nature of the bias has been ascertained. It was considered and assessed with respect to the fairness definition and criteria."
+                },
+                {
+                  "id": "039d5bbb-66bf-40b3-8267-38a6b083cb48",
+                  "label": "E",
+                  "text": "The data has been analysed for the most common and easily identifiable biases. This has been documented and considered with respect to the fairness definition and criteria."
+                },
+                {
+                  "id": "b8249a74-d8b3-4734-a8bf-e25927cc14f8",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "1549ec30-ae45-429a-8eb3-403254b992ee",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "53002a42-1d27-4196-906c-ed4d7d789e31",
+              "code": "F1.8",
+              "question": "Have trade-offs between fairness and other objectives been identified, assessed and justified?",
+              "guidance": "Identification, assessment and justification according to the target group and marginalised users/entities. Possible objectives can be performance or privacy.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "aa12d2b5-0540-43ed-863b-f7691413a69e",
+                  "label": "A",
+                  "text": "Trade-offs have been identified and documented in collaboration with the target group and marginalised groups. Consideration of how to balance any trade-off involved  collaboration with or are based on the feedback of the target group and marginalised groups. This process is well documented and accessible to the target group and marginalised groups"
+                },
+                {
+                  "id": "0080d738-bb4f-4f08-9fb2-85e601c8271f",
+                  "label": "B",
+                  "text": "Trade-offs have been identified and documented in collaboration with the target group and marginalised groups. Consideration of how to balance any trade-off involved  collaboration with or are based on the feedback of the target group and marginalised groups."
+                },
+                {
+                  "id": "f6e5f8a3-1753-441a-926e-504f2ddb4932",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "30290817-3b95-4a64-b2d2-ea3cdc38b20a",
+                  "label": "D",
+                  "text": "Trade-offs have been identified and document in collaboration with the target group and marginalised users/entities."
+                },
+                {
+                  "id": "8d9731a5-fd78-47e9-902a-1c08c032afe8",
+                  "label": "E",
+                  "text": "Trade-offs have been identified and document."
+                },
+                {
+                  "id": "72fd4f13-e570-4332-be7d-5c5bf6f15416",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "53b09acf-6d52-48a7-bf74-b72d62e70f21",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "6c0a5fb8-a317-4177-afdf-104ec1d21c63",
+          "code": "F2",
+          "name": "Working and Supply Chain Conditions",
+          "description": "",
+          "indicators": [
+            {
+              "id": "59a14eb6-3855-4370-81e0-63dba7e21e80",
+              "code": "F2.1",
+              "question": "Skippable if no external participation -- Are the working conditions of external persons involved in the labelling process evaluated?",
+              "guidance": "Minimal safety and worker protection standards and standards regarding social security and protection from exploitation in place at the facility providing click work are covered by the Supply Chain Act, for example.",
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "19aef7a5-8aef-41d6-8093-f64630469b15",
+                  "label": "A",
+                  "text": "Yes, the following conditions are evaluated: - minimal safety and worker protection standards, - minimal standards regarding social security and protection from exploitation, - click work-specific working conditions (diversification of tasks, potential emotional/psychological dangers from explicit material). The datasets (e.g. datasheet) contain information about labelling (click working) process. It is published, that external persons are involved."
+                },
+                {
+                  "id": "0741cf97-77a5-4d05-9852-b3ea3796b451",
+                  "label": "B",
+                  "text": "Yes, the following conditions are evaluated: - minimal safety and worker protection standards, - minimal standards regarding social security and protection from exploitation. The datasets (e.g. datasheet) contain information about labelling (click working) process. It is published, that external persons are involved."
+                },
+                {
+                  "id": "9c023e6a-eeb5-4832-8ae9-03b9d7b8f4e5",
+                  "label": "C",
+                  "text": "Yes, one of the two following conditions are evaluated: - minimal safety and worker protection standards, - minimal standards regarding social security and protection from exploitation. The datasets (e.g. datasheet) contain information about labelling (click working) process. It is published, that external persons are involved."
+                },
+                {
+                  "id": "f79cbb4e-d4e6-40a8-8203-891b5a0c0533",
+                  "label": "D",
+                  "text": "The datasets (e.g. datasheet) contain information about labelling (click working) process. It is published, that external persons are involved."
+                },
+                {
+                  "id": "510b90d1-b668-48e6-91ea-9c305a33a20c",
+                  "label": "E",
+                  "text": "It is published, that external persons are involved."
+                },
+                {
+                  "id": "39385edd-04ae-414f-83b6-4f9317b3e808",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "937d39fa-9175-4d4d-9b6b-187d91295d85",
+                  "label": "G",
+                  "text": "No, there is no evaluation or documentation"
+                }
+              ]
+            },
+            {
+              "id": "379927fd-855f-4a3b-9e46-106d3e469857",
+              "code": "F2.2",
+              "question": "Is the supply chain monitored to evaluate working conditions and to prevent human rights violation and child labour?",
+              "guidance": "Examples for legal requirements: - German Act on Corporate Due Diligence Obligations in Supply Chains, - EU Corporate Due Diligence Obligations in Supply Chains",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "24aa533e-126c-41c3-8936-26840375fe42",
+                  "label": "A",
+                  "text": "Yes, the supply chain is consequently monitored due to existing legal requirements or similar obligations."
+                },
+                {
+                  "id": "56ca38aa-390c-4c8c-9e38-ef8108140c31",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "6a560e6c-3a68-4fe2-a358-058e479dd418",
+                  "label": "C",
+                  "text": "The suppliers are reviewed once. There is a company specific policy to handle violations."
+                },
+                {
+                  "id": "83900e07-49b5-4e7b-9e36-408c9724025e",
+                  "label": "D",
+                  "text": "The suppliers are reviewed once."
+                },
+                {
+                  "id": "65b16393-1e93-46f1-beda-1ba2cf623fd4",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "78ee8dd1-0cc6-4e0e-a83a-7cc04e052ee6",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "3870b4c2-9e0d-4b31-a02c-9626921c60d5",
+                  "label": "G",
+                  "text": "No."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "31f9662a-c937-4ebf-84b9-66dd006916f5",
+          "code": "F3",
+          "name": "Ecological Sustain Development",
+          "description": "",
+          "indicators": [
+            {
+              "id": "4da8752b-3318-4be6-bdc7-5208fdf14fa7",
+              "code": "F3.1",
+              "question": "Are data centres or servers,which are used for developing, supplied with renewable energy?",
+              "guidance": "Renewable energy includes solar, wind, hydro, geothermal, biomass  and marine energy. Climate positivity can be reached through e.g. carbon offsetting or reuse of excess energy for heating.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "a1c3da2c-4df2-4add-9c7b-3f1d7c2bcfb1",
+                  "label": "A",
+                  "text": "Yes, at least 99% and the data centres are climate positive"
+                },
+                {
+                  "id": "1f05b72f-761e-4e3b-8e90-e8bec8c9a2e6",
+                  "label": "B",
+                  "text": "Yes, at least 99%"
+                },
+                {
+                  "id": "48301567-de3a-4aea-a37c-45dd1dbe8de8",
+                  "label": "C",
+                  "text": "In part, at least 80%"
+                },
+                {
+                  "id": "e8a99866-a6c3-4766-84c8-c042651ec5bf",
+                  "label": "D",
+                  "text": "In part, at least 60%"
+                },
+                {
+                  "id": "28ef2d1e-6d7b-4cea-9058-4c6ed6436e78",
+                  "label": "E",
+                  "text": "In part, at least 40%"
+                },
+                {
+                  "id": "0e290b3d-4280-44f9-83c0-aef7feb9764d",
+                  "label": "F",
+                  "text": "In part, at least 20%"
+                },
+                {
+                  "id": "36421d4f-bd98-4c5f-ae11-a0acb3910073",
+                  "label": "G",
+                  "text": "Less than 20%"
+                }
+              ]
+            },
+            {
+              "id": "3d8f0518-e619-4956-bdfe-95fe124460d4",
+              "code": "F3.2",
+              "question": "Is a report available detailing of energy consumption during training of the AI system?",
+              "guidance": "The report has to include a calculation or estimates of energy consumption and carbon emissions of all system components or the system overall, measures for carbon offsetting or energy reuse, a description of other ecological impact incl. directly resulting waste generation, an explanation of the process of consideration between its ecological impact (incl. energy consumption) and other factors (e.g. accuracy), and an explanation of why the chosen AI model is used with regards to its ecological sustainability.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "3b05f74b-e2f5-4f48-bcfe-a6c3302f4b6e",
+                  "label": "A",
+                  "text": "Yes, and this report was published before or during launch of the system with estimates and was updated after the launch with actual energy use calculations."
+                },
+                {
+                  "id": "78619bac-fa8d-46a7-b040-1598bbc5ad1b",
+                  "label": "B",
+                  "text": "Yes, and this report was published after the system was already in use"
+                },
+                {
+                  "id": "520d5ff7-264e-429d-8906-11138a75ee54",
+                  "label": "C",
+                  "text": "Yes, and this report was published before or during launch of the system with estimates"
+                },
+                {
+                  "id": "b3e8b6bd-8d11-42cb-9bc1-8a1ea6f92ef1",
+                  "label": "D",
+                  "text": "A report was written but is only available internally"
+                },
+                {
+                  "id": "02ce7a05-61d3-4d0e-be20-fd92f3623fd2",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "5708f481-edb9-4999-a3f0-e01c63a8ac19",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "b795748f-b45f-48e8-9f54-764da78b784e",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "3a743d53-1361-4f14-bed0-2e81fbdd4056",
+              "code": "F3.3",
+              "question": "How is the disposal of electronic waste processed?",
+              "guidance": "Does not include the waste generated by the user",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "5753ed12-ad50-4584-adc0-a3a4bb2b2a38",
+                  "label": "A",
+                  "text": "It is ensured that electronic waste is recycled as far as possible and not exported to risk areas (including Supply Chain)"
+                },
+                {
+                  "id": "49eced6c-5a2e-4d07-b1e3-c5f519b2584e",
+                  "label": "B",
+                  "text": "It is ensured that electronic waste is recycled as far as possible and not exported to risk areas (just for electronics that are in control of the organisation)"
+                },
+                {
+                  "id": "4e9c23b8-8a49-402a-8761-64595d5a1954",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "eda82910-ebc2-477c-9ec6-27a63ad6db18",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "c12d626c-3a49-4e80-aa46-48e945fbe93c",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "63fe72ff-f969-4c0d-8c03-966d09de0d82",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "7e7aa87d-b212-4d91-8218-6427e91037b7",
+                  "label": "G",
+                  "text": "There is no detailed knowledge"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05071523-5da9-4179-8615-d2eedbba961c",
+      "name": "Privacy",
+      "description": "Means protecting an individual's private sphere to uphold autonomy and democratic participation",
+      "path": "/data/3_privacy.json",
+      "total_questions": 8,
+      "icon": "diamond",
+      "color": "#b71c1c",
+      "bgColor": "#ffebee",
+      "borderColor": "#b71c1c",
+      "rawColorName": "red",
+      "version": "1.0",
+      "createdDate": "2025-06-10",
+      "criteria": [
+        {
+          "id": "db81293a-20b6-4182-836f-4dba33250da1",
+          "code": "P1",
+          "name": "Process for processing of data",
+          "description": "",
+          "indicators": [
+            {
+              "id": "bdc6afed-ac7b-455c-8efb-7f824c4488b9",
+              "code": "P1.1",
+              "question": "Do you comply to the GDPR?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "9ca4cf5e-28f1-4205-87b5-a0298945afbe",
+                  "label": "A",
+                  "text": "Yes."
+                },
+                {
+                  "id": "3c8c4477-ad92-4be8-b431-5c6aa9c61f73",
+                  "label": "B",
+                  "text": "No."
+                },
+                {
+                  "id": "17f4ef08-bfc5-449c-98ef-fba6770d039e",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "6e8a757a-1937-41ad-85ec-410fc1320e6d",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "9e4f776d-7b7f-4b90-8f62-ac44006fc6dc",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "fec3509a-e2b1-45e0-a7b0-587eab7ab893",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "3f3f159c-134e-40fa-878e-a25544eb75d5",
+                  "label": "G",
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "a67b8737-e8c6-4823-8005-cd5cd31507f2",
+          "code": "P2",
+          "name": "Protection of personal data (AI related)",
+          "description": "",
+          "indicators": [
+            {
+              "id": "bac849ba-ec2d-44ab-aec6-edcc1c5c7a80",
+              "code": "P2.1",
+              "question": "Which grade of anonymity has the used data?",
+              "guidance": "How anonymous is the dataset, i.e. How much personal information can be inferred from the dataset(s).",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "888bac3d-980b-4f2b-ad2e-7d6d81fbd50e",
+                  "label": "A",
+                  "text": "It is justified, that no personal data exists in the dataset."
+                },
+                {
+                  "id": "0f86d4bc-2ff4-4283-bdf2-90a417d344c1",
+                  "label": "B",
+                  "text": "Dataset has been sanitised (removal of all data directly identifing a natural person) and anonymised."
+                },
+                {
+                  "id": "93ac0d2b-4c07-441f-9867-1b55d3cc0013",
+                  "label": "C",
+                  "text": "dataset anonymised with state-of-the-art methods(e.g. k-anonymization, differential privacy, etc)"
+                },
+                {
+                  "id": "770f191a-0130-4a00-9ec4-77eb1cb7b9b3",
+                  "label": "D",
+                  "text": "Pseudonymization"
+                },
+                {
+                  "id": "f79f289c-1a59-45bc-9ed9-a01c5713ca7e",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "db59acc4-9ee4-46d3-a9b0-a76ef9dc4a80",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "1f545ae1-085e-4ba3-b97f-bd6ca436301a",
+                  "label": "G",
+                  "text": "No measures taken."
+                }
+              ]
+            },
+            {
+              "id": "b9111e91-4158-48cd-8b42-abd20964ef84",
+              "code": "P2.2",
+              "question": "Did you assured that no personal data can be extracted from the AI System?",
+              "guidance": "How does the AI system development and training, affect the privacy of the dataset. How much information can be inferred from the AI system/application as a result of the chosen development process? E.g. via model inversion, membership inference attack, etc.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "a275ced9-78d1-428d-8138-74613f4c9d7e",
+                  "label": "A",
+                  "text": "Yes, it is assured that no personal data can be extracted and the approach taken is justified in a report."
+                },
+                {
+                  "id": "842d3957-dc92-4ff7-bbc6-9eb7906eb9ee",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "a10f01e0-11ef-428b-9dc9-53d5fb509b51",
+                  "label": "C",
+                  "text": "It is justified, that personal data can only be extracted with high effort. "
+                },
+                {
+                  "id": "7dcf1d77-a3f1-4495-9d84-8bd99c2f8bf5",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "992559c3-9e34-46ed-8e62-ba2af5882857",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "85121975-f2f4-407f-b205-353f0c4e3fb7",
+                  "label": "F",
+                  "text": "Personal data can easily be extracted from the AI system. A public report explains to users which kind of data can be extracted and what the risk of extraction is."
+                },
+                {
+                  "id": "2a05bb54-a8c0-45ff-ae8d-7bad4bdcdc93",
+                  "label": "G",
+                  "text": "No measures taken."
+                }
+              ]
+            },
+            {
+              "id": "cd5bc4e8-0753-4a47-be20-26df48984dc7",
+              "code": "P2.3",
+              "question": "What measure have you taken, to prevent attacks on the AI System and Application with the aim to inferred data/information?",
+              "guidance": "Deployed/Live-system privacy preserving mechanism and privacy attack mitigation process",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "0d174cc5-d76d-42dd-9fda-6ffc7144f88d",
+                  "label": "A",
+                  "text": "Analysis of the potential attacks; Evaluation of the possible risk.; Countermeasures to mitigate the risks. Strict Access Control (no direct access to AI system or AI application for the user). Penetration tests have been conducted"
+                },
+                {
+                  "id": "b9a822e6-2b09-493a-bf55-e4e59dbf1573",
+                  "label": "B",
+                  "text": "Analysis of the potential attacks; Evaluation of the possible risk.; Countermeasures to mitigate the risks.; Access Control; Penetration tests have been conducted"
+                },
+                {
+                  "id": "235dfb21-47b5-4086-8ea3-fa708ff44609",
+                  "label": "C",
+                  "text": "Analysis of the potential attacks; Evaluation of the possible risk.; Countermeasures to mitigate the risks. Access Control"
+                },
+                {
+                  "id": "f7e5943f-bcc0-434a-bdf0-6d7203518f3e",
+                  "label": "D",
+                  "text": "Analysis of the potential attacks; Evaluation of the possible risk.; Countermeasures to mitigate the risks."
+                },
+                {
+                  "id": "ba081a5e-20dd-45bb-8ee7-3c03dda8c43e",
+                  "label": "E",
+                  "text": "Analysis of the potential attacks; Evaluation of the possible risk."
+                },
+                {
+                  "id": "715bf300-50b9-4708-aa17-52f943fc9e84",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "d84b6ff6-582f-48be-b966-f02b1201df55",
+                  "label": "G",
+                  "text": "No measures taken."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "22883d6a-6eff-4c95-9629-66c807d303df",
+          "code": "P3",
+          "name": "Consent-Process, Information and Influence for Users and affected Persons",
+          "description": "",
+          "indicators": [
+            {
+              "id": "d7f29121-d6e9-46a7-ae4e-80a388e2b07e",
+              "code": "P3.1",
+              "question": "Is the privacy impact assessment presented in the consent process?",
+              "guidance": "The assessment needs to include the following aspects:\nWhat might be a concrete physical impacts when working with the system?\nWhat kind of moral harm can be caused by such a system?\nWhat could be material consequences of such a system?",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "fe48b734-3733-43ea-85ea-dc724aee83ca",
+                  "label": "A",
+                  "text": "Yes, individualized for different user groups"
+                },
+                {
+                  "id": "e1797a1f-14fc-43fb-98f9-98b38c0e0196",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "13e06fb4-af36-452e-b5be-349a2bf2a5f4",
+                  "label": "C",
+                  "text": "Yes, but in a general way"
+                },
+                {
+                  "id": "30d3a1bc-7757-443d-a992-8e5f5f478549",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "b9409ce2-e964-40f2-b702-cf391d2a60dd",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "5195c875-a21e-42d4-8446-6f2dad3e0f23",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "e2a52d2f-49de-4127-85c8-41cba22a1313",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "f03c4437-fb2a-4b49-a8f7-b055e03a9e9f",
+              "code": "P3.2",
+              "question": "Is the privacy impact assessment accessible for affected Persons?",
+              "guidance": "If there is a system that is allowed to take data from non-users due to a permission status (Erlaubnistatbeständes), can they still see the impact analysis?",
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "5a51950c-3962-45e5-9737-039d0d664b65",
+                  "label": "A",
+                  "text": "Yes, individualized for different groups of affected persons"
+                },
+                {
+                  "id": "86d84e17-c200-47b2-a4da-6f0aa3ca3137",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "12655613-797b-4ebe-9858-f139ae4bd42b",
+                  "label": "C",
+                  "text": "Yes, but in a general way"
+                },
+                {
+                  "id": "12c4a8a0-799d-4d9a-b5ae-ad3a5b052923",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "e4c3d8e4-a9f9-413a-a23a-f4e94bbdfd12",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "0f7b7f2f-979e-4fa3-8a8c-0bbcc267bd82",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "8d87e600-2189-4052-a622-bf435c6a9939",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "fc5f69ac-8ca6-4e5b-9878-0479893fb798",
+              "code": "P3.3",
+              "question": "Can affected persons review and rectify data concerning them?",
+              "guidance": "If there is a system that is allowed to collect data from non-users due to a permission status (Erlaubnistatbeständes), can they still see what data has been collected from them and have the opportunity to correct it?",
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "9ce770e2-9671-40c3-8ccd-ea05a2d57c22",
+                  "label": "A",
+                  "text": "There is a possibility that allows affected persons to easily review and rectify data concerning them. Appropriate information (e.g. sign) that data is collected is available. Contact possibilities are indicated"
+                },
+                {
+                  "id": "e2b5752a-7e17-4040-b9ca-ba48f4cc3b21",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "19dc116f-fd39-4ad6-9a53-3304fcfb09fb",
+                  "label": "C",
+                  "text": "There is a possibility for affected persons to review and rectify data concerning them on request. Appropriate information (e.g. sign) that data is collected is available. Contact possibilities are indicated"
+                },
+                {
+                  "id": "cf995911-de1e-40ab-88f1-a81bccbd278a",
+                  "label": "D",
+                  "text": "No possibility to review or rectify data; Appropriate information (e.g. sign) that data is collected is available. Contact possibility are indicated"
+                },
+                {
+                  "id": "672cde34-1823-4cd0-8adf-300850a2e5ff",
+                  "label": "E",
+                  "text": "Appropriate information (e.g. sign) that data is collected is available."
+                },
+                {
+                  "id": "f59f9d70-6279-43dd-8ad1-c23e89420cd0",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "0535c70c-73dd-4630-97db-c0a4323662df",
+                  "label": "G",
+                  "text": "No."
+                }
+              ]
+            },
+            {
+              "id": "6dc956c7-0d34-4d8c-b50c-58b26f0bc221",
+              "code": "P3.4",
+              "question": "Design of the Consent-Process",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": false,
+              "options": [
+                {
+                  "id": "98d9663a-dfce-4d02-b857-471fcc482c3b",
+                  "label": "A",
+                  "text": "The consent process was examined and identified for possible nudging or persuasive computing effects from a psychological and sociological perspective. The effects were communicated to: - users, - affected persons. Appropriate precautionary measures were taken regarding: -users, - affected persons. Privacy by default (opt-in for usage of personal data is needed) for: -users, - affected persons"
+                },
+                {
+                  "id": "104a2ce1-1011-4fc8-87b9-598d20b192fb",
+                  "label": "B",
+                  "text": "The consent process was examined and identified for possible nudging or persuasive computing effects from a psychological and sociological perspective. The effects were communicated to: - users, - affected persons. Appropriate precautionary measures were taken regarding: -users. Privacy by default (opt-in for usage of personal data is needed) for: -users"
+                },
+                {
+                  "id": "5361d068-5218-48da-998a-1c3828040465",
+                  "label": "C",
+                  "text": "The consent process was examined and identified for possible nudging or persuasive computing effects from a psychological and sociological perspective. The effects were communicated to: - users, - affected persons."
+                },
+                {
+                  "id": "8ba49e2a-a365-4992-9cc2-365427760bc1",
+                  "label": "D",
+                  "text": "The consent process was examined and identified for possible nudging or persuasive computing effects from a psychological and sociological perspective. The effects were communicated to: - users"
+                },
+                {
+                  "id": "86583080-ca90-4960-8c60-802ce23233c1",
+                  "label": "E",
+                  "text": "The consent process was examined and identified for possible nudging or persuasive computing effects from a psychological and sociological perspective."
+                },
+                {
+                  "id": "012845c3-5c07-4de1-a43a-847428aee76f",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "9ddabe87-06be-417b-b9e6-df8bb150f23f",
+                  "label": "G",
+                  "text": "An examination has not taken place."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14fd595d-2ae0-429c-96dc-5b37164e42fc",
+      "name": "Reliability",
+      "description": "Precondition for trust in and/or predictability of the AI system and a significant factor in the prevention of harm",
+      "path": "/data/4_reliability.json",
+      "total_questions": 10,
+      "icon": "circle",
+      "color": "#854c00",
+      "bgColor": "#fff0dc",
+      "borderColor": "#854c00",
+      "rawColorName": "orange",
+      "version": "1.0",
+      "createdDate": "2025-06-09",
+      "criteria": [
+        {
+          "id": "c9abfd4e-e317-46b3-8bba-8f1493204cdc",
+          "code": "R1",
+          "name": "Robustness & Reliability qua Design",
+          "description": "",
+          "indicators": [
+            {
+              "id": "d8f480fb-0731-41b3-a49e-a7987398e8ec",
+              "code": "R1.1",
+              "question": "Is the operational design domain of the AI system/application clearly defined and documented?",
+              "guidance": "The Operational Design Domain (ODD) describes the conditions and environment an AI system/application is intended to operate within, and reasonably expected to encounter. This ODD should be described accurately and in enough detail such that the environment and boundaries of operation are clear.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "f4247ad1-0afe-407f-9b0d-3ca40f32737a",
+                  "label": "A",
+                  "text": "A ontologically complete, structured and detailed description of the operational design domain and the intended use cases. These are published and well understood by the users of the AI system, auditors, regulatory bodies, and all additional stakeholders."
+                },
+                {
+                  "id": "8d36b651-47e7-4eac-a5a3-bb4a971c9af5",
+                  "label": "B",
+                  "text": "A ontologically complete, structured and detailed description of the operational design domain and the intended use cases. These are published and well understood by the users of the AI system, auditors, and regulatory bodies."
+                },
+                {
+                  "id": "bb75ee62-2b6c-4dfd-bd1a-212e6ee91920",
+                  "label": "C",
+                  "text": "A description of the operational design domain and the intended use cases. These are published and well understood by the users of the AI system, auditors, and regulatory bodies."
+                },
+                {
+                  "id": "a1be2ea3-8b98-4fb7-966c-33d862addb9f",
+                  "label": "D",
+                  "text": "A description of the operational design domain and the intended use cases. These are published and well understood by the users of the AI system."
+                },
+                {
+                  "id": "8206c26f-57cc-44f6-b298-df828db96fe5",
+                  "label": "E",
+                  "text": "A description of the intended use cases. These are published and well understood by the users of the AI system."
+                },
+                {
+                  "id": "196a406a-72ae-48be-aad0-ed8bbd63d0d5",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "da3b073b-b61f-47bc-9dde-8909b6857931",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "e2515d89-f5a5-403b-9035-2a39e24b52e1",
+              "code": "R1.2",
+              "question": "Was ensured, that the quality and quantity of the data fit to the intended purpose and Operational Design Domain?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "20d6739e-9150-44c4-a1f7-9a8d62a02893",
+                  "label": "A",
+                  "text": "Documentation of which shows the examination of: Completeness of the attributes of the data, Correctness of data, data format, the labeling and Annotation Process including quality assurance, compatibility of Training data with the operational design domain, relevant data preparation; i.e. raw data pre-processing (e.g. cleaning, enrichment, aggregation) with regard to the intended purpose and Operational Design Domain of the AI System"
+                },
+                {
+                  "id": "1ed2bacc-5743-4026-8730-2c79fcb63864",
+                  "label": "B",
+                  "text": "Documentation of which shows the examination of: Completeness of the attributes of the data, Correctness of data, data format, the labeling and Annotation Process including quality assurance, compatibility of Training data with the operational design domain, relevant data preparation; i.e. raw data pre-processing (e.g. cleaning, enrichment, aggregation)."
+                },
+                {
+                  "id": "04fc2452-80aa-4fef-8b3a-f941900af515",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "981443a5-a0eb-4244-b3b9-a30e96b6e870",
+                  "label": "D",
+                  "text": "Documentation of which shows the examination of: Completeness of the attributes of the data, Correctness of data, data format, the Labeling and Annotation Process including quality assurance, relevant data preparation; i.e. raw data pre-processing (e.g. cleaning, enrichment, aggregation)."
+                },
+                {
+                  "id": "2b41742f-ff7e-4bd6-b357-922da0a5710a",
+                  "label": "E",
+                  "text": "Documentation of which shows the examination of: Completeness of the attributes of the data, Correctness of data, data format, the Labeling and Annotation Process including quality assurance."
+                },
+                {
+                  "id": "d7d1a609-ad21-4cd0-b1ab-e98917aa7562",
+                  "label": "F",
+                  "text": "Documentation of which shows the examination of: Completeness of the attributes of the data, data format."
+                },
+                {
+                  "id": "e28847d1-49a1-4dbc-9a93-165e6892c5c7",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "6f7a3546-9e9a-4876-ae8e-9465b4a0a448",
+              "code": "R1.3",
+              "question": "Was the quality of the development of the AI systems ensured?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "d334fa0e-d486-43e3-84ab-c3ca916a0f14",
+                  "label": "A",
+                  "text": "Justification of the approach and models used. With documentation and justification of the chosen: - Performance and Evaluation Metrics - Optimization metric - The testing strategy. Live testing that covers the ODD and reasonably foreseen situations of the OD has been performed."
+                },
+                {
+                  "id": "95504dbd-51b1-47e6-855c-e7751fc78eab",
+                  "label": "B",
+                  "text": "Justification of the approach and models used. With documentation and justification of the chosen: - Performance and Evaluation Metrics - Optimization metric - The testing strategy. Live testing that covers the ODD has been performed."
+                },
+                {
+                  "id": "73ed6194-28ca-455a-badd-246eb55de2e8",
+                  "label": "C",
+                  "text": "Justification of the approach and models used. With documentation and justification of the chosen: - Performance and Evaluation Metrics - Optimization metric - The testing strategy. (Virtual) Testing inside the ODD has been performed."
+                },
+                {
+                  "id": "a2a4afdc-524a-4a22-9ab7-a226bd46ffc1",
+                  "label": "D",
+                  "text": "Justification of the approach and models used. With documentation and justification of the chosen: - Performance and Evaluation Metrics - Optimization metric. (Virtual) Testing inside the ODD has been performed."
+                },
+                {
+                  "id": "c41916fa-55a3-4e37-871f-499e70d1bdbb",
+                  "label": "E",
+                  "text": "Justification of the approach and models used. With documentation and justification of the chosen: - Performance and Evaluation Metrics - Optimization metric."
+                },
+                {
+                  "id": "a1f2f5be-bd51-454b-8aa5-b2811348aebd",
+                  "label": "F",
+                  "text": "Justification of the approach and models used."
+                },
+                {
+                  "id": "7ea21a3c-0a76-4d45-9ce6-7f831828992b",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "b8664a0f-0d7a-40bf-a48e-be23f52566f8",
+              "code": "R1.4",
+              "question": "Is the system robust against varying environments (i.e. distribution shift) and outliers?",
+              "guidance": "Varying environments can influence the Performance of an AI system. The system needs to be able to detect varying environments to adapt its behaviour.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "81b6e774-3899-42ce-a5d0-1fac040a31eb",
+                  "label": "A",
+                  "text": "System must be able to gracefully track and monitor changes in the operational environment. It must offer mechanisms to adapt to observed changes in the operational design domain."
+                },
+                {
+                  "id": "19ca6695-c34a-4289-8ce5-7a7bec39d146",
+                  "label": "B",
+                  "text": "Relaxation of Grade A: reasonably adhere to changes in the operational design domain."
+                },
+                {
+                  "id": "724ebaa4-39da-4e5a-b4cc-0282857d7c50",
+                  "label": "C",
+                  "text": "Yes, but only in a subdomain."
+                },
+                {
+                  "id": "cc3841f9-e43d-4a0f-8d9f-e0978fe66e48",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "95ba7b81-e37c-4c31-8dfe-d27e01a483cc",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "5f4e8263-aa4d-4aaf-8b03-feeca1f27b20",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "15f7cbf0-2bc5-466a-9476-97b8b494880a",
+                  "label": "G",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "id": "53e31e63-d37f-432e-9e56-1c4c4292c50c",
+              "code": "R1.5",
+              "question": "Are all possible risks assessed and the harms the system could have classified (e.g. life and health, violation of rights etc.)?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "01ccac68-419c-447c-8363-8032f97ac440",
+                  "label": "A",
+                  "text": "All risks are transparent, well documented with the product and made available to customers."
+                },
+                {
+                  "id": "9970fd59-52d1-443e-8ffd-644e7ec35f98",
+                  "label": "B",
+                  "text": "All risks are transparent and can be obtained by a defined interface."
+                },
+                {
+                  "id": "dcdf08a5-df28-4ec0-b5bd-9b2085854b31",
+                  "label": "C",
+                  "text": "Main risks are identified and can be retrieved by a defined process."
+                },
+                {
+                  "id": "34a7e3c2-47ab-475b-81d8-3cabde5b3ad1",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "8f37c083-1f99-42ea-8fd6-5fd952e6de6f",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "0dac5c2a-b74e-4aa1-9494-dc50f866014c",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "46739c4f-612b-4742-bd24-b029bf731e5d",
+                  "label": "G",
+                  "text": "None of the above."
+                }
+              ]
+            },
+            {
+              "id": "cf831b54-f251-43d2-9526-9a909c1228b7",
+              "code": "R1.6",
+              "question": "Are measures in place to ensure the integrity, robustness and overall security of the AI system/application against potential attacks over its life cycle?",
+              "guidance": "Implementation of general cybersecurity measures.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "0bf14cbc-f498-41a8-9b5c-f7a55a732974",
+                  "label": "A",
+                  "text": "Compliance to cybersecurity standards (e.g. ISO 27k series, IEC 62443, ISO/SAE 21434, ETSI EN 303 645,...). Regular review security measures and protocols. Measures (including the ones taken during training of AI system) are defined and transparently documented with the product."
+                },
+                {
+                  "id": "44d07a76-a743-4896-aaec-54907c5c8e8a",
+                  "label": "B",
+                  "text": "Measures are defined and transparently documented with the product."
+                },
+                {
+                  "id": "c34cb5c1-d248-4ff7-ae8f-4b83a08704aa",
+                  "label": "C",
+                  "text": "Measures defined information can be retrieved by a defined interface."
+                },
+                {
+                  "id": "ff28e062-c8f1-4e97-8984-1024001cd94f",
+                  "label": "D",
+                  "text": "Measures partly defined and information can be retrieved by a defined process."
+                },
+                {
+                  "id": "ed79593f-2cc5-4da9-b7a5-ec5465a66c21",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "2f49f01b-d7ac-40d0-99d5-3e6e8e776b4e",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "3c7b8ada-a846-4cd9-b93f-882b48903fd4",
+                  "label": "G",
+                  "text": "None of the above."
+                }
+              ]
+            },
+            {
+              "id": "9208b3d7-3569-4cfd-a9ad-2c606455f9b2",
+              "code": "R1.7",
+              "question": "Did you inform end-users of the duration of security coverage and updates? What length is the expected timeframe within which you provide security updates for the AI system?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "4a39427e-889c-445c-bfab-43eecd9913f9",
+                  "label": "A",
+                  "text": "Information is shipped with the product."
+                },
+                {
+                  "id": "de351937-181c-4d41-925b-aacabf6926e8",
+                  "label": "B",
+                  "text": "Information can be obtained by a defined interface."
+                },
+                {
+                  "id": "b084e7b2-bc35-43ea-a2bc-12eb69f32115",
+                  "label": "C",
+                  "text": "Information partially available and can be retrieved by a defined process."
+                },
+                {
+                  "id": "aab52e2d-88f2-4255-be3f-f474806b9104",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "d3f63f06-8f8d-4387-83b0-488f2a3c8df0",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "e1cc13e5-2c60-4882-84e8-968f21eba13c",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "aa98d49f-7131-4997-9f27-09f60ec35edc",
+                  "label": "G",
+                  "text": "None of the above."
+                }
+              ]
+            },
+            {
+              "id": "bb77d5d3-b3a9-4e8e-9cc0-21bdbc84f0a4",
+              "code": "R1.8",
+              "question": "Are technical documentations documented, including standards, that need to be applied by the AI system/application?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "3abd0fe0-0c74-434a-bc5d-35e7b22bff75",
+                  "label": "A",
+                  "text": "Yes."
+                },
+                {
+                  "id": "cf58a506-fa22-498e-952c-39b725d21a30",
+                  "label": "B",
+                  "text": ""
+                },
+                {
+                  "id": "508168f6-e4cd-48da-84df-95352f9249c3",
+                  "label": "C",
+                  "text": ""
+                },
+                {
+                  "id": "a96b460a-e521-4eb2-81f1-f254b64b00bd",
+                  "label": "D",
+                  "text": ""
+                },
+                {
+                  "id": "59c1421d-b10e-47a9-9391-8618717e5e40",
+                  "label": "E",
+                  "text": ""
+                },
+                {
+                  "id": "62f85ada-d210-44e3-b611-3b6d0be6ef22",
+                  "label": "F",
+                  "text": ""
+                },
+                {
+                  "id": "3263aa3a-fee6-4750-869d-d5215bba7dd6",
+                  "label": "G",
+                  "text": "No."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4c4adfed-12eb-45c1-8107-88dad5a4754b",
+          "code": "R2",
+          "name": "Robustness & Reliability in Operation",
+          "description": "",
+          "indicators": [
+            {
+              "id": "190f42c8-ae66-41fd-a71b-2454b05fc608",
+              "code": "R2.1",
+              "question": "Is the applied AI lifecycle management robust to changes in the operational domain?",
+              "guidance": null,
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "5dea5b42-2219-4feb-838c-ba4e76d85347",
+                  "label": "A",
+                  "text": "Continuous model monitoring and testing (including integrity checks) as a feature of the AI strategy covering the full operational domain."
+                },
+                {
+                  "id": "40a0ddff-e5e4-4f35-ac55-c6e0dc8b8bf3",
+                  "label": "B",
+                  "text": "Continuous model monitoring and testing (including integrity checks) as a feature of the AI strategy covering key/important areas of the operational domain."
+                },
+                {
+                  "id": "8a63ce29-9383-4bc7-bc80-9bfc32969c24",
+                  "label": "C",
+                  "text": "Regular model monitoring and testing (including integrity checks) as a feature of the AI strategy covering key/important areas of the operational domain."
+                },
+                {
+                  "id": "02f7cea8-b146-4838-82f9-5832bb5e14a0",
+                  "label": "D",
+                  "text": "Occasional model monitoring and testing (including integrity checks) are carried out."
+                },
+                {
+                  "id": "5b8b88b3-14fe-46b8-ad21-7764880420ee",
+                  "label": "E",
+                  "text": "Occasional model monitoring and testing is carried out."
+                },
+                {
+                  "id": "0c14230a-73e1-4d1e-9726-31ef2c0027d7",
+                  "label": "F",
+                  "text": "Occasional testing is carried out."
+                },
+                {
+                  "id": "bbbd5238-68c2-4e64-a888-15f68b9400d8",
+                  "label": "G",
+                  "text": "None of the above."
+                }
+              ]
+            },
+            {
+              "id": "bf06ac2b-6cc6-4f7a-b2d5-300a25cb6a57",
+              "code": "R2.2",
+              "question": "Is a failure mitigation strategy for the AI-based system in place?",
+              "guidance": "Is there a fail-safe strategy for the AI-based system in place? Reaction of the system if parts of it are not working properly (such as sensors malfunctioning) or if the input data is either corrupted or contains noise.",
+              "importanceLevel": 3,
+              "required": true,
+              "options": [
+                {
+                  "id": "88a5db16-2356-4676-bf70-72c01e6f52ab",
+                  "label": "A",
+                  "text": "Presence of fall-back systems in case the AI-based system cannot work properly anymore (e.g., broken/dirty lens/microphone, electromagnetic interference)."
+                },
+                {
+                  "id": "98ec12d3-9c1e-4a15-9c65-c1b5382a63ed",
+                  "label": "B",
+                  "text": "Redundancy, fall back mechanisms (e.g., defaulting to a safe mode, kill-switch), alert system (end-user, provider, competent authority), fail-safe logging (i.e., black box), secure failure (e.g., tamper protection, safe mode), and system restoration."
+                },
+                {
+                  "id": "67d2e995-4355-4abf-a45a-dcd680b252ba",
+                  "label": "C",
+                  "text": "Redundancy, fall back mechanisms, alert system, fail-safe logging, secure failure."
+                },
+                {
+                  "id": "e36e9903-b3fa-43ba-bf6b-9a775df66df5",
+                  "label": "D",
+                  "text": "Redundancy, fall back mechanisms, alert system, secure failure."
+                },
+                {
+                  "id": "a787806d-554e-4d42-95bd-a70d9ccb358f",
+                  "label": "E",
+                  "text": "Fall back mechanisms, alert system, secure failure."
+                },
+                {
+                  "id": "28c3f3f9-9c02-4330-a774-940e52f2bc7e",
+                  "label": "F",
+                  "text": "Fall back mechanisms, basic alert system."
+                },
+                {
+                  "id": "9067d58f-d328-4607-89ea-0d3abe3bf34f",
+                  "label": "G",
+                  "text": "None of the above."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "source": "AI Ethics Editor",
+    "version": "2.0"
+  }
+}
